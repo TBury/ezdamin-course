@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl-pl">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Giełda transportowa</title>
+</head>
+<body>
+    <header>
+        <img src="gielda.png" alt="Logo giełdy transportowej">
+        <h1>Giełda transportowa</h1>
+    </header>
+    <main>
+        <section id="lewy">
+            <h2>Flota firmy Pol-Trans</h2>
+            <p>Nasza flota składa się z 5 pojazdów. To pojazdy o wysokiej klasie i niesamowitych osiągach. Sprawdź ich
+                szczegóły.</p>
+            <div id="opcje">
+                <label>Wybierz pojazd z listy: </label>
+                <br><br>
+                <select name="pojazd" id="pojazdy">
+                    <option value="renault">Renault</option>
+                    <option value="man">MAN</option>
+                    <option value="scania">Scania</option>
+                    <option value="mercedes">Mercedes-Benz</option>
+                </select>
+                <button id="wybierz-pojazd">Wybierz</button>
+                <p id="wynik"></p>
+            </div>
+        </section>
+        <section id="prawy">
+            <h1>Zlecenia transportowe</h1>
+            <table>
+                <tr>
+                    <th>Miasto załadunku</th>
+                    <th>Miasto rozładunku</th>
+                    <th>Ładunek</th>
+                    <th>Firma</th>
+                </tr>
+                <?php
+                        $connection = mysqli_connect("localhost", "root", "", "transportowa");
+                        mysqli_query($connection, "SET NAMES 'utf8'");
+                        $result = mysqli_query($connection, "SELECT miasto_zal, miasto_rozl, ladunek, firma FROM zlecenia");
+                        while ($row = mysqli_fetch_row($result)) {
+                            echo '<tr>';
+                            echo '<td>'.$row[0].'</td>';
+                            echo '<td>'.$row[1].'</td>';
+                            echo '<td>'.$row[2].'</td>';
+                            echo '<td>'.$row[3].'</td>';
+                            echo '</tr>';
+                        }
+                    ?>
+            </table>
+
+            <div id="kalkulator">
+                <h3>Kalkulator zlecenia transportowego</h3>
+                <p>Tutaj obliczysz, ile rynkowo kosztuje zlecenie transportowe.</p>
+                <label>Podaj ilość ton: </label>
+                <input type="number" name="tony" id="waga">
+                <br><br>
+                <label>Podaj ilość kilometrów: </label>
+                <input type="number" name="tony" id="dystans">
+                <br><br>
+                <label>Rodzaj towaru: </label>
+                <select name="towar" id="rodzaj-towaru">
+                    <option value="chlodnia">Chłodniczy</option>
+                    <option value="zwykly">Zwykły</option>
+                    <option value="gabaryt">Gabaryt</option>
+                </select>
+                <br><br>
+                <button id="oblicz">Oblicz koszt</button>
+            </div>
+            <h1 id="koszt"></h1>
+        </section>
+    </main>
+    <footer>
+        <p>Wykonał: </p>
+    </footer>
+</body>
+<script src="skrypt.js"></script>
+</html>

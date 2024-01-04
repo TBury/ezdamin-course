@@ -1,0 +1,25 @@
+SELECT miasto_zal, miasto_rozl, ladunek, firma FROM zlecenia;
+
+CREATE USER nazwa IDENTIFIED BY password
+	nazwa - nazwa użytkownika
+	IDENTFIIED BY - wyznaczanie hasła dla użytkownika
+
+CREATE USER 'spedytor'@'localhost' IDENTIFIED BY "Sp3dyt0r!"
+
+select - lista rozwijana
+option - opcja tej listy
+	value - to wartość którą posiada dana opcja, nie jest wyświetlana, ale jest dostępna przez .value w JS
+	obok jest wyświetlana nazwa widoczna dla użytkownika
+
+kontener > dziecko
+	dziecko to element który znajduje sie w kontenerze
+
+
+SET NAMES 'utf8' - polskie znaki w rekordach z PHP
+
+sposoby na dodanie zdarzenia kliknięcia w JS:
+	- atrybut onclick="nazwaFunkcji()" w HTML
+	- przyciskWybierzPojazd.onclick = function () { ... }
+	- przyciskWybierzPojazd.addEventListener("click", () => {})
+	- przyciskWybierzPojazd.addEventListener("click", nazwaFunkcji);
+
