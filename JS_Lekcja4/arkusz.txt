@@ -1,0 +1,4 @@
+W zależności od naciśniętego przycisku, ustaw dla zdjęcia od id nagroda:
+- gdy przycisk Laptop, obraz laptop.jpg oraz tekst alternatywny "laptop"
+- gdy przycisk Lodka, obraz lodeczka.jpg oraz tekst alternatywny "lodka bols"
+- gdy przycisk Metro, obraz metro.jpg oraz tekst alternatywny "nastepna stacja - zdana praktyka"
