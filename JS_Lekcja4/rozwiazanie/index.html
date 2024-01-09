@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>Wybierz swoje zamówienie</h1>
+    <img src="" alt="" id="nagroda">
+    <button id="laptop" onClick="laptop()">Weź laptopa</button>
+    <button id="lodka" onClick="lodka()">Weź łódkę</button>
+    <button id="metro" onClick="metro()">Weź metro</button>
+</body>
+<script>
+    function laptop() {
+        if(document.getElementById("nagroda").src == "laptop.jpg") {
+            alert("siema");
+        }
+        document.getElementById("nagroda").src = "laptop.jpg";
+        document.getElementById("nagroda").alt = "laptop";
+    }
+
+    function lodka() {
+        document.getElementById("nagroda").src = "lodeczka.jpg";
+        document.getElementById("nagroda").alt = "lodka bols";
+    }
+
+    function metro() {
+        document.getElementById("nagroda").src = "metro.jpg";
+        document.getElementById("nagroda").alt = "nastepna stacja - zdana praktyka";
+    }
+</script>
+</html>

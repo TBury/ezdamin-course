@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styl3.css">
     <title>Stacja paliw</title>
 </head>
+
 <body>
     <header id="kontener-baner">
         <header id="baner-lewy">
@@ -21,10 +23,10 @@
         <br>
         <input type="number" id="rodzaj">
         <br>
-        Ile litrów: 
+        Ile litrów:
         <br>
         <input type="number" id="ilosc">
-        <button id="oblicz" onclick="oblicz()">OBLICZ</button>
+        <button id="oblicz">OBLICZ</button>
         <p id="wynik"></p>
     </main>
     <section id="kontener-sekcja">
@@ -39,4 +41,22 @@
         <p>Stronę opracował: 00000000000</p>
     </footer>
 </body>
+<script>
+    let rodzaj = document.getElementById("rodzaj").value;
+    let ilosc = document.getElementById("ilosc").value;
+    let koszt = 0;
+    if (rodzaj == 1) {
+        koszt = ilosc * 4;
+    }
+    if (rodzaj == 2) {
+        koszt = ilosc * 3.5;
+    }
+    if (rodzaj != 1 && rodzaj != 2) {
+        koszt = 0;
+    }
+
+    document.getElementById("wynik").innerHTML = "koszt paliwa: " + koszt + " zł";
+
+</script>
+
 </html>
