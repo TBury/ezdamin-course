@@ -24,6 +24,19 @@
                 <th>Numer Rejsu</th>
                 <th>Status</th>
             </tr>
+            <?php
+                $polaczenie = mysqli_connect("localhost", "root", "", "egzamin");
+                $wyniki = mysqli_query($polaczenie, "SELECT czas, kierunek, nr_rejsu, status_lotu FROM przyloty ORDER BY czas ASC");
+                while ($r = mysqli_fetch_row($wyniki)) {
+                    echo "<tr>";
+                    echo "<td>".$r[0]."</td>";
+                    echo "<td>".$r[1]."</td>";
+                    echo "<td>".$r[2]."</td>";
+                    echo "<td>".$r[3]."</td>";
+                    echo "</tr>";
+                }
+                mysqli_close($polaczenie);
+            ?>
         </table>
     </main>
     <section id="kontener-stopka">

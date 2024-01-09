@@ -23,6 +23,18 @@
 		</section>
 		<section id="dolny">
 			<h2>Zarezerwuj stolik on-line</h2>
+            <?php
+	            $data = $_POST["data"];
+	            $ilosc = $_POST["ilosc"];
+	            $numer = $_POST["numer"];
+	            if (!empty($data) && !empty($ilosc) && !empty($numer)) {
+                    echo "Dodano rezerwację do bazy";
+                    $kwerenda = "INSERT INTO rezerwacje SET data_rez='$data', liczba_osob='$ilosc', telefon='$numer';"
+                    $polaczenie = mysqli_connect("localhost", "root", "", "baza");
+	                mysqli_query($polaczenie, $kwerenda);
+                    mysqli_close($polaczenie);
+                }
+            ?>
 			<form action="" method="post">
 				<label>
 					Data (format rrrr-mm-dd):<br>
