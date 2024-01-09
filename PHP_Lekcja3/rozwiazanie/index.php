@@ -29,7 +29,7 @@
 	            $numer = $_POST["numer"];
 	            if (!empty($data) && !empty($ilosc) && !empty($numer)) {
                     echo "Dodano rezerwację do bazy";
-                    $kwerenda = "INSERT INTO rezerwacje SET data_rez='$data', liczba_osob='$ilosc', telefon='$numer';"
+                    $kwerenda = "INSERT INTO rezerwacje SET data_rez='$data', liczba_osob='$ilosc', telefon='$numer';";
                     $polaczenie = mysqli_connect("localhost", "root", "", "baza");
 	                mysqli_query($polaczenie, $kwerenda);
                     mysqli_close($polaczenie);
