@@ -1,0 +1,51 @@
+body {
+    background-color: crimson;
+    font-family: Tahoma;
+}
+
+header {
+    height: 370px;
+    color: white;
+    padding: 20px;
+}
+
+.mecz {
+    color: white;
+    margin: 10px;
+    text-align: center;
+}
+
+.mecz:hover {
+    color: red;
+}
+
+main,
+#lewy,
+#prawy {
+    background-color: whitesmoke;
+}
+
+main {
+    height: 50px;
+    padding: 10px;
+}
+
+#lewy {
+    width: 70%;
+    height: 230px;
+}
+
+#prawy {
+    width: 30%;
+    height: 230px;
+    text-align: right;
+}
+
+h2 {
+    margin-top: 15px;
+    text-transform: capitalize;
+}
+
+p {
+    font-size: 14px;
+}

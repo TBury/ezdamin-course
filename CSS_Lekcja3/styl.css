@@ -1,0 +1,17 @@
+header {
+    height: 370px;
+}
+
+main {
+    height: 50px;
+}
+
+#lewy {
+    width: 70%;
+    height: 230px;
+}
+
+#prawy {
+    width: 30%;
+    height: 230px;
+}

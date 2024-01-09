@@ -38,19 +38,6 @@
                     <th>Ładunek</th>
                     <th>Firma</th>
                 </tr>
-                <?php
-                        $connection = mysqli_connect("localhost", "root", "", "transportowa");
-                        mysqli_query($connection, "SET NAMES 'utf8'");
-                        $result = mysqli_query($connection, "SELECT miasto_zal, miasto_rozl, ladunek, firma FROM zlecenia");
-                        while ($row = mysqli_fetch_row($result)) {
-                            echo '<tr>';
-                            echo '<td>'.$row[0].'</td>';
-                            echo '<td>'.$row[1].'</td>';
-                            echo '<td>'.$row[2].'</td>';
-                            echo '<td>'.$row[3].'</td>';
-                            echo '</tr>';
-                        }
-                    ?>
             </table>
 
             <div id="kalkulator">
@@ -78,5 +65,4 @@
         <p>Wykonał: </p>
     </footer>
 </body>
-<script src="skrypt.js"></script>
 </html>
