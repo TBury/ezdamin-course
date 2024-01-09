@@ -42,15 +42,6 @@
     <section id="kontener-stopka">
         <footer id="stopka-1">
             <p id="stopka__tekst">
-                <?php
-                    if (isset($_COOKIE["odwiedzil"])) {
-                        echo "<i>Witaj ponownie na stronie lotniska</i>";
-                    }
-                    else {
-                        setcookie("odwiedzil", 1, time() + 3600, "/");
-                        echo "<b>Dzień dobry! Strona lotniska używa ciasteczek</b>"
-                    }
-                ?>
             </p>
         </footer>
         <footer id="stopka-2">Autor: 0000000000</footer>
